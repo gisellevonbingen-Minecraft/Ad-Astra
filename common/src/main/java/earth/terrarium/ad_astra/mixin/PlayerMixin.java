@@ -70,12 +70,6 @@ public abstract class PlayerMixin {
 
                 if (!player.level.isClientSide || player.isLocalPlayer()) {
                     jetSuit.updateFlying(player, chest);
-                } else {
-                    jetSuit.setFallFlying(false);
-                    jetSuit.setEmitParticles(false);
-                    if (!player.level.isClientSide) {
-                        chest.getOrCreateTag().putBoolean("SpawnParticles", false);
-                    }
                 }
             }
         }
