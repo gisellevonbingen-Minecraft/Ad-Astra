@@ -65,7 +65,8 @@ public class LocalPlayerMixin {
 
         if (JetSuit.hasFullSet(player)) {
             PlayerOverlayScreen.shouldRenderBattery = true;
-            if (!chest.isEmpty() && chest.getItem() instanceof JetSuit) {
+            if (!chest.isEmpty() && chest.getItem() instanceof JetSuit jetSuit) {
+                jetSuit.updateFlying(player, chest);
                 JetSuit.updateBatteryOverlay(chest);
             }
         } else {

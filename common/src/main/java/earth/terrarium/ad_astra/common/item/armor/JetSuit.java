@@ -121,7 +121,7 @@ public class JetSuit extends NetheriteSpaceSuit implements EnergyItem {
     public long getTankSize() {
         return SpaceSuitConfig.jetSuitTankSize;
     }
-
+    
     // Display status, energy
     @Override
     public void appendHoverText(ItemStack stack, Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag context) {
@@ -216,7 +216,6 @@ public class JetSuit extends NetheriteSpaceSuit implements EnergyItem {
                     player.stopFallFlying();
                 }
             }
-
             if (newFlyingType == FlyingType.UPWARD || newFlyingType == FlyingType.FALL) {
                 ModUtils.sendUpdatePacket(serverPlayer);
             }
